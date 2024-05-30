@@ -39,7 +39,7 @@ class Vector {
 }
 ```
 
-Next, let's create an `Object` class that can store these edges & vertices. It'll look a littl empty for now; we'll add more to this later!
+Next, let's create an `Object` class that can store these edges & vertices. It'll look a little empty for now; we'll add more to this later!
 
 ```Javascript
 class Object {
