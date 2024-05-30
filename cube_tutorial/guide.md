@@ -207,7 +207,7 @@ Using the power of Rotation Matrices, we now have a set of methods that allows u
 
 After transforming all our points, we need to actually draw them. To do this, we'll add two methods to our `Object` class in order 
 
-The first one, `project()`, simply centers all our points; we'll use this later to add perspective distortion.
+The first one, `project()`, simply centers our shape; we can do more with it, guide for that is coming soon
 
 The second one, `renderLines()`, iterates through our array of edges & vertices and returns the lines that blot needs to draw. 
 
