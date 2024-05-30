@@ -1,6 +1,6 @@
 # 3D object guide
 
-This is a basic guide that will walk you through the process of drawing a 3D object (in this case a cube) with Blot. The math we're dealing with hear is called **Linear Algebra**, but prior knowledge is NOT necessary!
+This is a basic guide that will walk you through the process of drawing a 3D object (in this case a cube) with Blot. The math we're dealing with here is called **Linear Algebra**, but prior knowledge is NOT necessary!
 
 This document is meant to be viewed alongside the source code.
 
@@ -27,7 +27,7 @@ let CUBE_SIZE = 20;
 
 #### Defining a point
 
-First, let's define a class `Vector` that allows us to define a point in 3D space. It will have a coordinate for x, y, and z respectively
+First, let's define a class `Vector` that allows us to define a point in 3D space. It will have coordinates for x, y, and z respectively
 
 ```Javascript
 class Vector {
@@ -54,7 +54,7 @@ class Object {
 
 When creating 3D shapes, it helps to think of them as a bunch of points in 3D space. For example, a square pyramid has 4 points at its base, and one point at the top. Likewise, a cube is essentially two squares connected to each other, which means there's 8 vertices in total.
 
-Using our `Vector` class from earlier, we can define vertices & edges and pass it through a new instance of our `Object` class.
+Using our `Vector` class from earlier, we can define vertices & edges and pass it through a new instance of our `Object` class. To do this, we'll create a `Cube` class.
 
 ```Javascript
 // Create a cube using our Object class
