@@ -139,7 +139,7 @@ const config: Config = {
         //   ],
         // },
       ],
-      copyright: `Made with <3 by Alex. Built with Docusaurus`,
+      copyright: `Made with ❤️ by Alex. Built with Docusaurus`,
     },
     prism: {
       theme: prismThemes.github,
