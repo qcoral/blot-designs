@@ -1,3 +1,13 @@
+---
+sidebar_position: 2
+---
+
+# Source code
+
+This is what the final program should look like
+
+```Javascript
+
 /*
   This is an example program that renders a controllable 3D cube with blot. 
   To be used with the corresponding guide
@@ -133,3 +143,5 @@ cube.rotate({ x: pitch, y: yaw, z: roll });
 
 // Render the object
 drawLines(cube.renderLines());
+
+```

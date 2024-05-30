@@ -1,4 +1,8 @@
-# 3D object guide
+---
+sidebar_position: 1
+---
+
+# Draw a cube with blot
 
 This is a basic guide that will walk you through the process of drawing a 3D object (in this case a cube) with Blot. The math we're dealing with here is called **Linear Algebra**, but prior knowledge is NOT necessary!
 
@@ -6,7 +10,7 @@ This document is meant to be viewed alongside the source code.
 
 If you just want to view the final product, go ahead and copy-paste the source code into Blot.
 
-### Setup
+## Setup
 
 As with any blot program, we need to set up our scene with some basic variables first:
 
@@ -23,9 +27,9 @@ let roll = 0.5;  // Rotation around Z-axis
 let CUBE_SIZE = 20;
 ```
 
-### Creating a 3D object
+## Creating a 3D object
 
-#### Defining a point
+### Defining a point
 
 First, let's define a class `Vector` that allows us to define a point in 3D space. It will have coordinates for x, y, and z respectively
 
@@ -50,7 +54,7 @@ class Object {
 }
 ```
 
-#### Defining our cube
+### Defining our cube
 
 When creating 3D shapes, it helps to think of them as a bunch of points in 3D space. For example, a square pyramid has 4 points at its base, and one point at the top. Likewise, a cube is essentially two squares connected to each other, which means there's 8 vertices in total.
 
@@ -95,9 +99,9 @@ const Cube = (size) => {
 We now have a cube we can work with! Next, we'll see how we can rotate this cube in 3D space
 
 
-### Rotating our object
+## Rotating our object
 
-#### Rotation Matrices
+### Rotation Matrices
 
 This is where the bulk of the our difficulty lies. Our task here is to take the x, y, and z coordinates from each point in our cube and somehow rotate them in 3D space. This is where we can use something called a **Rotation Matrix**, which is a handy tool that allows us to take a given vector $V$, rotate it along any axes, and give us the position of that new vector.
 
@@ -115,7 +119,7 @@ z
 0 & \cos\theta & -\sin\theta \\
 0 & \sin\theta & \cos\theta
 \end{bmatrix}
-\=
+=
 \begin{bmatrix}
 x \\
 y\cos\theta-z\sin\theta \\
@@ -139,7 +143,7 @@ Read more at https://en.wikipedia.org/wiki/Rotation_matrix
 
 </details>
 
-#### Implementing it in code
+### Implementing it in code
 
 If we add this to our `Vector` class, it should look something like this:
 
@@ -203,7 +207,7 @@ class Object {
 
 Using the power of Rotation Matrices, we now have a set of methods that allows us to rotate a given vector in 3D space. By extending it to our `Object` class, we are able to rotate entire *shapes* however we want!
 
-### Drawing our cube
+## Drawing our cube
 
 After transforming all our points, we need to actually draw them. To do this, we'll add two methods to our `Object` class in order 
 
@@ -263,7 +267,7 @@ drawLines(cube.renderLines());
 
 If all went well, you should see a cube appear on the screen! If not, check with the source code.
 
-### Next steps
+## Next steps
 
 Congrats! You have officially drawn a 3D object with blot. Some things to try:
 
