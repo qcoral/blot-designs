@@ -133,13 +133,11 @@ Where the right side represents our new x, y, and z coordinates from top to bott
 
 <summary>How does this actually work?</summary>
 
-The essence of what we're doing here is called a **linear transformation** 
+The essence of what we're doing here is called a **Linear transformation** 
 
-I highly recommend watching [this](https://www.youtube.com/watch?v=kYB8IZa5AuE) video by 3Blue1Brown to get a better understanding.
+It's easier to see how this looks from a 2-D perspective first.
 
-Essentially, we are changing the basis vectors of each axis to its trigonmetric function output.
-
-Read more at https://en.wikipedia.org/wiki/Rotation_matrix
+(insert manim gif)
 
 </details>
 
@@ -266,6 +264,10 @@ drawLines(cube.renderLines());
 ```
 
 If all went well, you should see a cube appear on the screen! If not, check with the source code.
+
+## Extending with perspective distortion
+
+Currently, what we have is called an *orthographic* projection. This means that 
 
 ## Next steps
 
